@@ -1,0 +1,83 @@
+arduino.c - código escrito em C
+arduino.cpp - código escrito em C++
+arduino.cs - código escrito em C#
+arduino.py - código escrito em python
+arduino.ipynb - código escrito em python notebook
+arduino.java - código escrito em java
+
+C++
+Ponto vírgula - em C++ toda INSTRUÇÃO tem ; no final.
+Comentar - é um pedaço do código que não será executado. 
+Single line - "//" esse cometário só serve para uma linha.
+Multi line - "/* vou colocar minha anotação aqui
+				 e termina em outra linha. */"
+
+DECLARAÇÃO DE VARIÁVEIS
+	int idade_João = 18;
+	bool sala_com_aluno = 1;
+	bool indicador_de_ocupacao = false; //VARIÁVEIS
+	
+Arduino
+
+Como funciona a estrutura do código de arduino	
+
+1 - Definição de variáveis / importação de bibliotecas
+2 - Função de Setup
+	No arduino, função de setup serve somente para Inicializare 
+	e somente roda 1 ÚNICA VEZ.
+	
+	Sintaxe - A forma como escreve.
+
+	void setup(){
+		//Tudo que estiver aqui dentro, executa só uma vez.
+		
+		sala_com_aluno = true;
+		pinMode(variável que eu quero definir, comando que vai ser definido) //Função com 2 argumentos que define se é entradaou saída.
+		pinMode(3, OUTPUT);
+		pinMode(1, INPUT);
+		
+	}
+	
+	Não volta mais aqui, até que o arduino seja reiniciado.
+	
+	
+3 - Função de Loop
+	Fica executando o nosso código adoidado!
+	O código deve estar aqui dentro.
+	
+	
+	void loop() {
+		indicador_de_ocupacao = true;
+		digitalWrite(3, HIGH); //Serve para ligar ukpino - pode dois argumentos - (pino - operação - HIGH/LOW)
+		delay(1000); //tempo de 1 segundo para apagar o led.
+		indicador_de_ocupacao = 0;
+		delay(1000);
+	}
+	
+4 - Funções adicionais
+
+
+
+
+
+
+//condições
+/*
+IF (SE):
+Se acontecer algo, faz outro algo.
+Só executa uma ação, se a condição de entrada for verdadeira,
+*/
+
+SINTAXE:
+IF(BOTAO FOR ACIONADO){
+	LIGA LED VERM.
+	LIGA LED AMAR.
+	LIGA LED VERDE
+	
+/*
+ELSE (SE NÃO):
+Caso a condição do if não for verdadeira, executa outra coisa.
+Impede que as próximas linhas do programa interfiram na condicional do if.	
+*/
+	
+}
